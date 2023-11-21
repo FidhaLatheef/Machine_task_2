@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ImageSlider from './ImageSlider'; // Assuming the component is in the same directory
 
-function App() {
+const App = () => {
+  // Define your images array
+  const images = [
+    'https://example.com/image1.jpg',
+    'https://example.com/image2.jpg',
+    'https://example.com/image3.jpg',
+  ];
+
+  // Set custom values for parallaxIntensity and transitionSpeed
+  const parallaxIntensity = 15;
+  const transitionSpeed = 700;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Custom Image Slider</h1>
+      <ImageSlider
+        images={images}
+        parallaxIntensity={parallaxIntensity}
+        transitionSpeed={transitionSpeed}
+      />
     </div>
   );
-}
+};
 
 export default App;
