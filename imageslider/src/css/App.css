@@ -6,12 +6,13 @@
 .text-content {
   position: absolute;
   top: 50%;
-  left: 50%;
+  /* left: 30%; */
+  margin-left: 150px;
   padding: 5px 15px;
   transform: translate(-50%, -50%);
-  background: gray;
+  /* background: gray; */
   color: white;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   font-size: 50px;
   z-index: 2; /* Ensure text is above the parallax background */
 }
@@ -23,7 +24,17 @@
   transform: translate(-50%, -50%);
   z-index: 1; /* Ensure the icon is below the text */
 }
+.icon-contentup {
+  position: absolute;
+  top: 30%; /* Adjust the percentage to move the icon down */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the icon is below the text */
+}
 
 .icon-content i {
+  font-size: 30px; /* Adjust the font size of the icon */
+}
+.icon-contentup i {
   font-size: 30px; /* Adjust the font size of the icon */
 }
